@@ -14,6 +14,10 @@ public class HumanPlayer implements Player {
 
     @Override
     public void respond(boolean lowerOrGreater) {
-        //TODO: implement me
+        if (!lowerOrGreater) {
+            logger.log("The number to find is greater than your guess");
+        } else {
+            logger.log("The number to find is lower than your guess");
+        }
     }
 }
