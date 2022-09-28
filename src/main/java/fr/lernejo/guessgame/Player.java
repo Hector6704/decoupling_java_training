@@ -1,4 +1,4 @@
-package fr.lernejo.guessname;
+package fr.lernejo.guessgame;
 
 public interface Player {
     long askNextGuess();

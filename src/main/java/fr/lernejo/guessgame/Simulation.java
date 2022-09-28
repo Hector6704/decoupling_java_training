@@ -1,14 +1,12 @@
-package fr.lernejo.guessname;
+package fr.lernejo.guessgame;
 
 import fr.lernejo.logger.Logger;
 import fr.lernejo.logger.LoggerFactory;
 
 public class Simulation {
-
     private final Logger logger = LoggerFactory.getLogger("simulation");
     private final Player player;
     private int numberToGuess;
-
     public Simulation(Player player) {
         this.player = player;
     }

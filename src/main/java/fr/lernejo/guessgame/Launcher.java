@@ -1,4 +1,4 @@
-package fr.lernejo.guessname;
+package fr.lernejo.guessgame;
 
 import java.security.SecureRandom;
 
@@ -7,8 +7,8 @@ public class Launcher {
         Player player = new HumanPlayer();
         Simulation sim = new Simulation(player);
         SecureRandom random = new SecureRandom();
-        long Number = random.nextInt(100);
-        sim.initialize(Number);
+        long randomNumber = random.nextInt(100);
+        sim.initialize(randomNumber);
         sim.loopUntilPlayerSucceed();
     }
 }
