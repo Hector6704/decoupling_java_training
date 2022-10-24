@@ -37,10 +37,10 @@ public class Simulation {
         }
         long endTime = System.currentTimeMillis();
         if (i == maxTry) {
-            logger.log("You failed to guess the number in " + maxTry + " tries");
+            logger.log("You failed to find the number in " + maxTry + " tries");
         }
         else {
-            logger.log("You guessed the number in " + (endTime - startTime)/1000 + " seconds and " + (i + 1) + " tries");
+            logger.log("You found the number in " + (endTime - startTime)/1000 + " seconds and " + (i + 1) + " tries");
         }
     }
 }
