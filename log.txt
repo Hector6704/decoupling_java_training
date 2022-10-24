@@ -1,0 +1,9 @@
+You took 0:0.0 to find the number and you didn't find the number before the maxTry
+You guessed wrong
+You guessed wrong
+You guessed wrong
+You guessed wrong
+You guessed wrong
+You guessed wrong
+You guessed the number
+You took 0:0.11 to find the number and you found the number before the maxTry

@@ -4,7 +4,10 @@ import java.security.SecureRandom;
 
 public class Launcher {
     public static void main(String[] args) {
-        if (args[0].equalsIgnoreCase("-interactive")) {
+        if (args.length == 0) {
+            System.out.println("Possible commands are : -interactive or -auto <number>");
+        }
+        else if (args[0].equalsIgnoreCase("-interactive")) {
             Player player = new HumanPlayer();
             Simulation sim = new Simulation(player);
             SecureRandom random = new SecureRandom();
