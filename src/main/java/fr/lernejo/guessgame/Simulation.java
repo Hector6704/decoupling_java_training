@@ -21,11 +21,9 @@ public class Simulation {
     private boolean nextRound() {
         long guess = player.askNextGuess();
         if (guess == numberToGuess) {
-            logger.log("You guessed the number");
             return true;
         }
         player.respond(guess < numberToGuess);
-        logger.log("You guessed wrong");
         return false;
     }
 
