@@ -16,7 +16,7 @@ public class ComputerPlayer implements Player{
     @Override
     public void respond(boolean lowerOrGreater) {
         if (lowerOrGreater) {
-            logger.log("The value to find is higher");
+            logger.log("The value to find is bigger");
             min = (min + max)/2;
         }
         else {

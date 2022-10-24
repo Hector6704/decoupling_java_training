@@ -25,7 +25,7 @@ public class HumanPlayer implements Player {
     @Override
     public void respond(boolean lowerOrGreater) {
         if (lowerOrGreater)
-            logger.log("The value to find is higher" );
+            logger.log("The value to find is bigger" );
         else
             logger.log("The value to find is lower");
     }
