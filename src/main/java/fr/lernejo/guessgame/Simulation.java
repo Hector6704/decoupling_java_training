@@ -29,15 +29,20 @@ public class Simulation {
         return false;
     }
 
-    public void loopUntilPlayerSucceed(int maxTry) {
+    public void loopUntilPlayerSucceed(long maxTry) {
         long startTime = System.currentTimeMillis();
-        int i = 0;
+        int i;
         for (i = 0; i < maxTry; i++) {
             if (nextRound()) {
                 break;
             }
         }
         long endTime = System.currentTimeMillis();
-        logger.log(String.format("You took %d:%d.%d to find the number and you %s the number before the maxTry", (endTime - startTime) / 60000, (endTime - startTime) / 1000 % 60, (endTime - startTime) % 1000, i < maxTry ? "found" : "didn't find"));
+        if (i == maxTry) {
+            logger.log("You failed to guess the number in " + maxTry + " tries");
+        }
+        else {
+            logger.log("You guessed the number in " + (endTime - startTime)/1000 + " seconds and " + (i + 1) + " tries");
+        }
     }
 }

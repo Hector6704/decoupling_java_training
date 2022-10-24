@@ -1,22 +1,27 @@
+
 package fr.lernejo.guessgame;
 
-public class ComputerPlayer implements  Player {
-    private int min = 0;
-    private int max = 100;
-    private int guess = 50;
+import fr.lernejo.logger.Logger;
+import fr.lernejo.logger.LoggerFactory;
 
+public class ComputerPlayer implements Player{
+    private final Logger logger = LoggerFactory.getLogger("computer");
+    private long min = Long.MIN_VALUE;
+    private long max = Long.MAX_VALUE;
     @Override
     public long askNextGuess() {
-        return guess;
+        return (min + max)/2;
     }
 
     @Override
     public void respond(boolean lowerOrGreater) {
         if (lowerOrGreater) {
-            min = guess;
-        } else {
-            max = guess;
+            logger.log("The value to find is higher");
+            min = (min + max)/2;
         }
-        guess = (max + min) / 2;
+        else {
+            logger.log("The value to find is lower");
+            max = (min + max)/2;
+        }
     }
 }

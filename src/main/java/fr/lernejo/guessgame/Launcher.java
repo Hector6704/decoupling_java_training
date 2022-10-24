@@ -13,7 +13,7 @@ public class Launcher {
             SecureRandom random = new SecureRandom();
             long randomNumber = random.nextInt(100);
             sim.initialize(randomNumber);
-            sim.loopUntilPlayerSucceed((int) Long.MAX_VALUE);
+            sim.loopUntilPlayerSucceed(Long.MAX_VALUE);
         }
         else if (args[0].equalsIgnoreCase("-auto") && isNumeric(args[1])) {
             Player player = new ComputerPlayer();
